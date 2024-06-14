@@ -6,11 +6,11 @@ const EditContact = ({ contact }) => {
     <>
       <button
         type="button"
-        className="btn btn-warning"
+        className="btn btn-warning btn-outline-dark"
         data-bs-toggle="modal"
         data-bs-target={`#edit-modal-${contact.id}`}
       >
-        Editar
+        <i class="fas fa-pen"></i>
       </button>
       <div
         className="modal fade"
@@ -23,7 +23,7 @@ const EditContact = ({ contact }) => {
           <div className="modal-content">
             <div className="modal-header">
               <h1 className="modal-title fs-5" id="exampleModalLabel">
-                Editar contacto
+                Edit contact
               </h1>
               <button
                 type="button"
@@ -33,7 +33,7 @@ const EditContact = ({ contact }) => {
               ></button>
             </div>
             <div className="modal-body">
-              <ContactsForm btnContent="Editar" id={contact.id} />
+              <ContactsForm btnContent="Edit" id={contact.id} />
             </div>
           </div>
         </div>

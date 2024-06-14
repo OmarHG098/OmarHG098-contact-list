@@ -40,14 +40,14 @@ const ContactsForm = ({ btnContent, id }) => {
 
   return (
     <form
-      className="card d-flex justify-content-center flex-column gap-3"
+      className="card d-flex justify-content-center mx-4 px-3"
       onSubmit={handleSubmit}
     >
-      <div className="form-group">
-        <label htmlFor="name">Name</label>
+      <div className="form-group p-2">
+        <label htmlFor="name"><i className="fas fa-user"></i>  Name</label>
         <input
           type="text"
-          className="form-control"
+          className="form-control bg-light"
           id="name"
           name="name"
           aria-describedby="nameHelp"
@@ -56,11 +56,11 @@ const ContactsForm = ({ btnContent, id }) => {
           placeholder="Contact name"
         />
       </div>
-      <div className="form-group">
-        <label htmlFor="phone">Phone</label>
+      <div className="form-group p-2">
+        <label htmlFor="phone"><i className="fas fa-phone"></i>  Phone</label>
         <input
           type="number"
-          className="form-control"
+          className="form-control bg-light"
           id="phone"
           name="phone"
           aria-describedby="phoneHelp"
@@ -69,11 +69,11 @@ const ContactsForm = ({ btnContent, id }) => {
           placeholder="Contact phone"
         />
       </div>
-      <div className="form-group">
-        <label htmlFor="email">Email</label>
+      <div className="form-group p-2">
+        <label htmlFor="email"><i className="fas fa-envelope"></i>  Email</label>
         <input
           type="email"
-          className="form-control"
+          className="form-control bg-light"
           id="email"
           name="email"
           aria-describedby="emailHelp"
@@ -82,11 +82,11 @@ const ContactsForm = ({ btnContent, id }) => {
           placeholder="Contact email"
         />
       </div>
-      <div className="form-group">
-        <label htmlFor="address">Address</label>
+      <div className="form-group p-2">
+        <label htmlFor="address"><i className="fas fa-map-marker-alt"></i>  Address</label>
         <input
           type="text"
-          className="form-control"
+          className="form-control bg-light"
           id="address"
           name="address"
           aria-describedby="textHelp"
@@ -96,7 +96,7 @@ const ContactsForm = ({ btnContent, id }) => {
         />
       </div>
 
-      <button type="submit" className="btn btn-primary" data-bs-dismiss="modal">
+      <button type="submit" className="btn btn-primary my-2 btn-md" data-bs-dismiss="modal btn-sm" >
         {btnContent}
       </button>
     </form>

@@ -1,3 +1,10 @@
 /* 
     General Styles
 */
+.contact .hide{
+    list-style: none;
+    display: none;
+}
+.contact:hover .hide{
+    display: block;
+} 
