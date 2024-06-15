@@ -1,10 +1,10 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 const ContactsForm = ({ btnContent, id }) => {
   const navigate = useNavigate();
-  const { actions } = useContext(Context);
+  const { store, actions } = useContext(Context);
   const [contact, setContact] = useState({
     name: "",
     phone: "",
@@ -37,6 +37,18 @@ const ContactsForm = ({ btnContent, id }) => {
   function handleChange(event) {
     setContact({ ...contact, [event.target.name]: event.target.value });
   }
+
+  useEffect(() =>{
+      if(id && store.contacts.length > 0){
+        const editingUser = store.contacts.find((item)=> item.id == id)
+        if(!editingUser) {
+          alert("El usuario no existe");
+          navigate("/");
+          return;
+        }
+        setContact(editingUser);
+      }
+    },[id, store.contacts]) 
 
   return (
     <form

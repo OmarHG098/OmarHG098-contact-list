@@ -124,7 +124,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             const data = await response.json();
             if (response.ok) {
               actions.getAgenda();
-              setStore({ contacts: [...store.contacts, data] });
+              //setStore({ contacts: [...store.contacts, data] });
             }  
         } catch (error) {
           console.log(error);          

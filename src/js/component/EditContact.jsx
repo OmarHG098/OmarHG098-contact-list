@@ -10,7 +10,7 @@ const EditContact = ({ contact }) => {
         data-bs-toggle="modal"
         data-bs-target={`#edit-modal-${contact.id}`}
       >
-        <i class="fas fa-pen"></i>
+        <i className="fas fa-pen"></i>
       </button>
       <div
         className="modal fade"

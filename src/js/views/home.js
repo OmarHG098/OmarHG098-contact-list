@@ -13,7 +13,7 @@ export const Home = () => {
         return (
           <div className="card m-2" key={contacts.id}>
             <div className="card-header d-flex justify-content-start gap-3">
-            <img src='https://picsum.photos/id/1/50' class="rounded-circle" alt="..."/> 
+            <img src='https://picsum.photos/id/1/50' className="rounded-circle" alt="..."/> 
             <h1 className="card-title d-flex justify-content-start pt-2">{contacts.name}</h1>
             </div>
             <div className="card-body justify-content-start">
@@ -34,7 +34,7 @@ export const Home = () => {
         );
       })}
         <Link to="/add-contact" className="btn btn-primary m-3 border-dark">
-        <i class="fas fa-user-plus"></i>
+        <i className="fas fa-user-plus"></i>
       </Link>
     </div>
   );
