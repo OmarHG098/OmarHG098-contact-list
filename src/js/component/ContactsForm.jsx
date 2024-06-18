@@ -26,6 +26,7 @@ const ContactsForm = ({ btnContent, id }) => {
     }
     if (id) {
       actions.editContact(id, contact);
+      navigate("/");
     } else {
       const response = await actions.createContact(contact);
       if (response) {
